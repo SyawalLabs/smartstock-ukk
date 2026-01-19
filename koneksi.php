@@ -1,4 +1,5 @@
 <?php
+
 /**
  * KONEKSI DATABASE
  * File ini menghubungkan PHP dengan MySQL
@@ -24,4 +25,3 @@ $koneksi = mysqli_connect($host, $username, $password, $database);
 if (!$koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
-?>
