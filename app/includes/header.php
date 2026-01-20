@@ -37,7 +37,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $page_title ?? 'Inventaris Syawal' ?> | UKK</title>
+    <title><?= $page_title ?? 'Inventaris Syawal' ?> | SmartStock</title>
 
     <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                     </svg>
-                    <span>Inventaris</span>
+                    <span>SmartStock</span>
                 </div>
             </div>
 
