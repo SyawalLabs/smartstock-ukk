@@ -159,12 +159,13 @@ foreach ($data_transaksi as $t) {
                 lengthMenu: "Tampilkan _MENU_ data",
                 info: "Menampilkan _START_ - _END_ dari _TOTAL_ data",
                 paginate: {
-                    first: "Pertama",
-                    last: "Terakhir",
-                    next: "Selanjutnya",
-                    previous: "Sebelumnya"
+                    previous: "Sebelumnya",
+                    next: "Selanjutnya"
                 }
             },
+
+            pagingType: "simple_numbers", // hanya angka
+
             order: [
                 [1, 'desc']
             ],

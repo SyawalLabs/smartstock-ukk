@@ -45,16 +45,18 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/bootstrap.min.css">
 
     <!-- DataTables CSS -->
-    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/datatables.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/datatables.min.css">
+    <!-- <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet"> -->
 
     <!-- SweetAlert2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/sweetalert2.min.css">
 
     <!-- Custom CSS -->
-    <link href="<?= $base_url ?>/app/assets/style.css" rel="stylesheet">
+    <link href="<?= $base_url ?>/app/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
