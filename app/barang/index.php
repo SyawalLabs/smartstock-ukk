@@ -144,8 +144,8 @@ foreach ($data_barang as $b) {
                 lengthMenu: "Tampilkan _MENU_ data",
                 info: "Menampilkan _START_ - _END_ dari _TOTAL_ data",
                 paginate: {
-                    previous: "Sebelumnya",
-                    next: "Selanjutnya"
+                    previous: "<strong> < </strong>",
+                    next: "<strong> > </strong>"
                 }
             },
 
