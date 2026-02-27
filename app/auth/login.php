@@ -56,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login | SmartStock</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= $base_url ?>/app/assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/bootstrap.min.css">
+    <link href="<?= $base_url ?>/app/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body class="login-page">
