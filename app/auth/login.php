@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/app/assets/bootstrap-icons/bootstrap-icons.css">
     <link href="<?= $base_url ?>/app/assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -64,9 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login-card">
         <div class="login-header">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-                </svg>
+                <i class="bi bi-box-seam-fill fs-3 text-primary"></i>
+
             </div>
             <h1>SmartStock</h1>
             <p>Silakan login untuk melanjutkan</p>

@@ -56,9 +56,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon primary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-                </svg>
+                <i class="bi bi-boxes fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($total_barang) ?></div>
             <div class="stat-label">Total Barang</div>
@@ -68,9 +66,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon success">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                </svg>
+                <i class="bi bi-stack fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($total_stok) ?></div>
             <div class="stat-label">Total Stok</div>
@@ -80,9 +76,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon primary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-                </svg>
+                <i class="bi bi-arrow-repeat fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($transaksi_hari_ini) ?></div>
             <div class="stat-label">Transaksi Hari Ini</div>
@@ -92,9 +86,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon warning">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                </svg>
+                <i class="bi bi-exclamation-triangle fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($stok_rendah) ?></div>
             <div class="stat-label">Stok Rendah</div>
@@ -160,33 +152,25 @@ $transaksi_terbaru = $stmt->fetchAll();
                 <div class="row g-3">
                     <div class="col-md-3">
                         <a href="<?= $base_url ?>/app/barang/tambah.php" class="btn btn-outline-primary w-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                            </svg>
+                            <i class="bi bi-plus-square fs-5"></i>
                             Tambah Barang
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="<?= $base_url ?>/app/transaksi/masuk.php" class="btn btn-outline-primary w-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15" />
-                            </svg>
+                            <i class="bi bi-arrow-down-circle fs-5"></i>
                             Barang Masuk
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="<?= $base_url ?>/app/transaksi/keluar.php" class="btn btn-outline-primary w-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
-                            </svg>
+                            <i class="bi bi-arrow-up-circle fs-5"></i>
                             Barang Keluar
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="<?= $base_url ?>/app/laporan/" class="btn btn-outline-primary w-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                            </svg>
+                            <i class="bi bi-file-earmark-text fs-5"></i>
                             Lihat Laporan
                         </a>
                     </div>
