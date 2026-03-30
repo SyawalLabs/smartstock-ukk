@@ -127,7 +127,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                     </div>
                 </div>
                 <a href="<?= $base_url ?>/app/auth/logout.php" class="logout-btn" title="Logout">
-                    <i class="bi bi-box-arrow-right fs-5"></i>
+                    <i class="bi bi-box-arrow-right fs-5 text-danger"></i>
                 </a>
             </div>
         </aside>
