@@ -116,7 +116,7 @@ require_once __DIR__ . '/../includes/header.php';
 
                         <div class="mb-4">
                             <label class="form-label">Keterangan</label>
-                            <textarea name="keterangan" class="form-control" rows="2" placeholder="Contoh: Pengiriman ke customer"><?= htmlspecialchars($_POST['keterangan'] ?? '') ?></textarea>
+                            <textarea name="keterangan" class="form-control" rows="2" placeholder="Contoh: Penjualan, pemakaian, dll"><?= htmlspecialchars($_POST['keterangan'] ?? '') ?></textarea>
                         </div>
 
                         <div class="d-flex gap-2">

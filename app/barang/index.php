@@ -25,7 +25,7 @@ foreach ($data_barang as $b) {
     </div>
     <div class="d-flex gap-2">
         <a href="tambah.php" class="btn btn-primary">
-            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-plus-circle"></i>
             Tambah Barang
         </a>
     </div>

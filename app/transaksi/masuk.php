@@ -95,7 +95,9 @@ require_once __DIR__ . '/../includes/header.php';
                 <label>Keterangan</label>
                 <textarea name="keterangan" class="form-control"></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Simpan</button>
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-save"></i>
+                Simpan</button>
         </form>
     </div>
 </div>
