@@ -81,7 +81,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="mb-3">
                 <label>Pilih Barang *</label>
                 <select name="id_barang" class="form-select" required>
-                    <option value="">-- Pilih --</option>
+                    <option value="">-- Pilih Barang --</option>
                     <?php foreach ($daftar_barang as $b): ?>
                         <option value="<?= $b['id'] ?>"><?= htmlspecialchars($b['nama_barang']) ?> (Stok: <?= $b['stok'] ?>)</option>
                     <?php endforeach; ?>
@@ -89,11 +89,11 @@ require_once __DIR__ . '/../includes/header.php';
             </div>
             <div class="mb-3">
                 <label>Jumlah Masuk *</label>
-                <input type="number" name="jumlah" class="form-control" min="1" required>
+                <input type="number" name="jumlah" placeholder="Masukan jumlah" class="form-control" min="1" required>
             </div>
             <div class="mb-3">
                 <label>Keterangan</label>
-                <textarea name="keterangan" class="form-control"></textarea>
+                <textarea name="keterangan" placeholder="Contoh: Pembelian, penambahan stok, dll" class="form-control"></textarea>
             </div>
             <button type="submit" class="btn btn-success">
                 <i class="bi bi-save"></i>
