@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File Koneksi Database
  */
@@ -9,7 +10,7 @@ $username = 'root';
 $password = '';
 
 // TAMBAHKAN INI: Sesuaikan dengan alamat di browser Laragon kamu
-$base_url = "http://smartstock-ukk.test:8080/"; 
+$base_url = "http://smartstock-ukk.test:8080/";
 
 try {
     $pdo = new PDO(
