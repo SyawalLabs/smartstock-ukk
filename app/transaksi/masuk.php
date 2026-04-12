@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Transaksi Barang Masuk
- * Proses form SEBELUM include header!
- */
-
 session_start();
 date_default_timezone_set('Asia/Jakarta');
 
@@ -71,7 +66,7 @@ require_once __DIR__ . '/../includes/header.php';
     <h1>Barang Masuk</h1>
 </div>
 
-<div class="card">
+<div class="card col-md-6">
     <div class="card-body">
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
@@ -79,7 +74,7 @@ require_once __DIR__ . '/../includes/header.php';
 
         <form method="POST">
             <div class="mb-3">
-                <label>Pilih Barang *</label>
+                <label>Pilih Barang</label>
                 <select name="id_barang" class="form-select" required>
                     <option value="">-- Pilih Barang --</option>
                     <?php foreach ($daftar_barang as $b): ?>
@@ -88,7 +83,7 @@ require_once __DIR__ . '/../includes/header.php';
                 </select>
             </div>
             <div class="mb-3">
-                <label>Jumlah Masuk *</label>
+                <label>Jumlah Masuk</label>
                 <input type="number" name="jumlah" placeholder="Masukan jumlah" class="form-control" min="1" required>
             </div>
             <div class="mb-3">
@@ -96,8 +91,9 @@ require_once __DIR__ . '/../includes/header.php';
                 <textarea name="keterangan" placeholder="Contoh: Pembelian, penambahan stok, dll" class="form-control"></textarea>
             </div>
             <button type="submit" class="btn btn-success">
-                <i class="bi bi-save"></i>
-                Simpan</button>
+                <i class="bi bi-save-fill"></i>
+                Simpan Barang</button>
+                            <a href="<?= $base_url ?>/app/dashboard.php" class="btn btn-outline-danger">Kembali</a>
         </form>
     </div>
 </div>

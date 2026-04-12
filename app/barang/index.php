@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Data Barang - List dengan Search, Pagination, dan Export
- */
-
 $page_title = 'Data Barang';
 require_once __DIR__ . '/../includes/header.php';
 require_once __DIR__ . '/../config/koneksi.php';
@@ -25,7 +21,7 @@ foreach ($data_barang as $b) {
     </div>
     <div class="d-flex gap-2">
         <a href="tambah.php" class="btn btn-primary">
-            <i class="bi bi-plus-circle"></i>
+            <i class="bi bi-plus-circle-fill"></i>
             Tambah Barang
         </a>
     </div>
@@ -36,7 +32,7 @@ foreach ($data_barang as $b) {
     <div class="col-md-4">
         <div class="stat-card">
             <div class="stat-icon primary">
-                <i class="bi bi-tags fs-4"></i>
+                <i class="bi bi-tags-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= count($data_barang) ?></div>
             <div class="stat-label">Jenis Barang</div>
@@ -45,7 +41,7 @@ foreach ($data_barang as $b) {
     <div class="col-md-4">
         <div class="stat-card">
             <div class="stat-icon success">
-                <i class="bi bi-boxes fs-4"></i>
+                <i class="bi bi-box-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format(array_sum(array_column($data_barang, 'stok'))) ?></div>
             <div class="stat-label">Total Stok</div>
@@ -54,7 +50,7 @@ foreach ($data_barang as $b) {
     <div class="col-md-4">
         <div class="stat-card">
             <div class="stat-icon warning">
-                <i class="bi bi-currency-dollar fs-4"></i>
+                <i class="bi bi-wallet-fill fs-4"></i>
             </div>
             <div class="stat-value" style="font-size: 18px;">Rp <?= number_format($total_nilai, 0, ',', '.') ?></div>
             <div class="stat-label">Nilai Inventaris</div>
@@ -71,9 +67,9 @@ foreach ($data_barang as $b) {
                         <th width="5%">No</th>
                         <th>Nama Barang</th>
                         <th width="12%">Stok</th>
-                        <th width="18%">Harga</th>
+                        <th width="18%">Harga Barang</th>
                         <th width="15%">Terakhir Update</th>
-                        <th width="12%">Aksi</th>
+                        <th width="12%">Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,11 +100,11 @@ foreach ($data_barang as $b) {
                             <td>
                                 <div class="btn-group" role="group">
                                     <a href="edit.php?id=<?= $barang['id'] ?>" class="btn btn-sm btn-warning" title="Edit">
-                                        <i class="bi bi-pencil-square"></i>
+                                        <i class="bi bi-pencil-fill"></i>
                                     </a>
                                     <button onclick="hapusBarang(<?= $barang['id'] ?>, '<?= htmlspecialchars($barang['nama_barang'], ENT_QUOTES) ?>')"
                                         class="btn btn-sm btn-danger" title="Hapus">
-                                        <i class="bi bi-trash"></i>
+                                        <i class="bi bi-trash-fill"></i>
                                     </button>
                                 </div>
                             </td>

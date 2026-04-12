@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Riwayat Transaksi dengan Search dan Pagination (Max 10)
- */
-
 $page_title = 'Riwayat Transaksi';
 require_once __DIR__ . '/../includes/header.php';
 require_once __DIR__ . '/../config/koneksi.php';
@@ -40,33 +36,6 @@ foreach ($data_transaksi as $t) {
 <div class="page-header">
     <h1>Riwayat Transaksi</h1>
     <p>Catatan semua transaksi barang</p>
-</div>
-
-<!-- Filter -->
-<div class="card mb-4">
-    <div class="card-body">
-        <form method="GET" class="row g-3 align-items-end">
-            <div class="col-md-3">
-                <label class="form-label">Jenis</label>
-                <select name="jenis" class="form-select">
-                    <option value="">Semua</option>
-                    <option value="masuk" <?= $filter_jenis === 'masuk' ? 'selected' : '' ?>>Masuk</option>
-                    <option value="keluar" <?= $filter_jenis === 'keluar' ? 'selected' : '' ?>>Keluar</option>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <label class="form-label">Dari</label>
-                <input type="date" name="dari" class="form-control" value="<?= $filter_dari ?>">
-            </div>
-            <div class="col-md-3">
-                <label class="form-label">Sampai</label>
-                <input type="date" name="sampai" class="form-control" value="<?= $filter_sampai ?>">
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn btn-primary w-100">Filter</button>
-            </div>
-        </form>
-    </div>
 </div>
 
 <!-- Summary -->

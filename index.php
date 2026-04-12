@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Index - Entry Point
- * Redirect ke dashboard atau login
- */
-
 session_start();
 
 // Jika sudah login, ke dashboard

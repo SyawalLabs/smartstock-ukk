@@ -5,7 +5,7 @@
  */
 
 $host = 'localhost';
-$dbname = 'smartstock_ukk';
+$dbname = 'raninventory';
 $username = 'root';
 $password = '';
 

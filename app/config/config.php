@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Konfigurasi Global Aplikasi
- * File ini mendeteksi base URL secara OTOMATIS
- * Jadi bisa dipakai di folder manapun!
- */
-
 // Deteksi base URL otomatis berdasarkan lokasi file ini
 $script_path = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 

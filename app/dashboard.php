@@ -47,7 +47,7 @@ $transaksi_terbaru = $stmt->fetchAll();
 ?>
 
 <div class="page-header">
-    <h1>Dashboard</h1>
+    <h1>Dashboard RanInventory</h1>
     <p>Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?>!</p>
 </div>
 
@@ -56,7 +56,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon primary">
-                <i class="bi bi-boxes fs-4"></i>
+                <i class="bi bi-box-seam-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($total_barang) ?></div>
             <div class="stat-label">Total Barang</div>
@@ -66,7 +66,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon success">
-                <i class="bi bi-stack fs-4"></i>
+                <i class="bi bi-bar-chart-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($total_stok) ?></div>
             <div class="stat-label">Total Stok</div>
@@ -76,7 +76,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon primary">
-                <i class="bi bi-arrow-repeat fs-4"></i>
+                <i class="bi bi-calendar-check-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($transaksi_hari_ini) ?></div>
             <div class="stat-label">Transaksi Hari Ini</div>
@@ -86,7 +86,7 @@ $transaksi_terbaru = $stmt->fetchAll();
     <div class="col-md-3">
         <div class="stat-card">
             <div class="stat-icon warning">
-                <i class="bi bi-exclamation-triangle fs-4"></i>
+                <i class="bi bi-exclamation-circle-fill fs-4"></i>
             </div>
             <div class="stat-value"><?= number_format($stok_rendah) ?></div>
             <div class="stat-label">Stok Rendah</div>
@@ -109,7 +109,6 @@ $transaksi_terbaru = $stmt->fetchAll();
         <div class="card h-100">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <span>Transaksi Terbaru</span>
-                <a href="<?= $base_url ?>/app/transaksi/riwayat.php" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
             </div>
             <div class="card-body p-0">
                 <div class="list-group list-group-flush">
@@ -143,43 +142,6 @@ $transaksi_terbaru = $stmt->fetchAll();
     </div>
 </div>
 
-<!-- Quick Actions -->
-<div class="row mt-4">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">Aksi Cepat</div>
-            <div class="card-body">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/barang/tambah.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-plus-square fs-5"></i>
-                            Tambah Barang
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/transaksi/masuk.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-arrow-down-circle fs-5"></i>
-                            Barang Masuk
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/transaksi/keluar.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-arrow-up-circle fs-5"></i>
-                            Barang Keluar
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/laporan/" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-file-earmark-text fs-5"></i>
-                            Lihat Laporan
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <?php
 // Simpan data chart untuk digunakan setelah footer loaded
 $chart_json = json_encode($chart_data);
@@ -187,7 +149,6 @@ $chart_json = json_encode($chart_data);
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
 
-<!-- Chart Script - HARUS setelah footer karena Chart.js dimuat di footer -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const chartData = <?= $chart_json ?>;

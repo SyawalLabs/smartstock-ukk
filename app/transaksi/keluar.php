@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Transaksi Barang Keluar
- * Proses form SEBELUM include header
- */
-
 session_start();
 date_default_timezone_set('Asia/Jakarta');
 
@@ -94,7 +89,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <?php else: ?>
                     <form method="POST">
                         <div class="mb-3">
-                            <label class="form-label">Pilih Barang <span class="text-danger">*</span></label>
+                            <label class="form-label">Pilih Barang</label>
                             <select name="id_barang" class="form-select" required id="selectBarang" onchange="updateStokInfo()">
                                 <option value="">-- Pilih Barang --</option>
                                 <?php foreach ($daftar_barang as $b): ?>
@@ -107,40 +102,27 @@ require_once __DIR__ . '/../includes/header.php';
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Jumlah Keluar <span class="text-danger">*</span></label>
+                            <label class="form-label">Jumlah Keluar</label>
                             <input type="number" name="jumlah" class="form-control" id="inputJumlah"
                                 value="<?= htmlspecialchars($_POST['jumlah'] ?? '') ?>"
-                                min="1" required placeholder="Masukkan jumlah" onchange="validateJumlah()">
+                                min="1" required placeholder="Jumlah Keluar" onchange="validateJumlah()">
                             <div id="jumlahWarning" class="invalid-feedback"></div>
                         </div>
 
                         <div class="mb-4">
                             <label class="form-label">Keterangan</label>
-                            <textarea name="keterangan" class="form-control" rows="2" placeholder="Contoh: Penjualan, pemakaian, dll"><?= htmlspecialchars($_POST['keterangan'] ?? '') ?></textarea>
+                            <textarea name="keterangan" class="form-control" rows="2" placeholder="Contoh: Pemakaian, penjualan, dll"><?= htmlspecialchars($_POST['keterangan'] ?? '') ?></textarea>
                         </div>
 
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-danger" id="btnSubmit">
-                                <i class="bi bi-save"></i>
+                                <i class="bi bi-save-fill"></i>
                                 Simpan
                             </button>
-                            <a href="<?= $base_url ?>/app/dashboard.php" class="btn btn-outline-primary">Kembali</a>
+                            <a href="<?= $base_url ?>/app/dashboard.php" class="btn btn-outline-danger">Kembali</a>
                         </div>
                     </form>
                 <?php endif; ?>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="card" style="border-color: #fbbf24;">
-            <div class="card-header" style="background: #fef3c7; color: #b45309;">Penting!</div>
-            <div class="card-body">
-                <ul class="mb-0 text-muted">
-                    <li>Stok akan berkurang otomatis</li>
-                    <li>Formula: <code>stok_baru = stok_lama - jumlah</code></li>
-                    <li><strong class="text-danger">Stok tidak boleh minus!</strong></li>
-                </ul>
             </div>
         </div>
     </div>
