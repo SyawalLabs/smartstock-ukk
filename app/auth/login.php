@@ -61,6 +61,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="<?= $base_url ?>/app/assets/css/style.css" rel="stylesheet">
 </head>
 
+<script id="togglepw">
+    function togglePassword() {
+        const password = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        if (password.type === 'password') {
+            password.type = 'text';
+            eyeIcon.classList.remove('bi-eye');
+            eyeIcon.classList.add('bi-eye-slash');
+        } else {
+            password.type = 'password';
+            eyeIcon.classList.remove('bi-eye-slash');
+            eyeIcon.classList.add('bi-eye');
+        }
+    }
+</script>
+
 <body class="login-page">
     <div class="login-card">
         <div class="login-header">
@@ -79,21 +96,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form method="POST" autocomplete="off">
+            <!-- Username -->
             <div class="mb-3">
                 <label class="form-label">Username</label>
-                <input type="text" name="username" class="form-control"
-                    placeholder="Masukkan username"
-                    value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"
-                    required autofocus>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+                    <input type="text" name="username" class="form-control"
+                        placeholder="Masukkan Username"
+                        value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"
+                        required autofocus>
+                </div>
             </div>
 
+            <!-- Password -->
             <div class="mb-4">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control"
-                    placeholder="Masukkan password" required>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-lock-fill"></i>
+                    </span>
+                    <input type="password" name="password" id="password" class="form-control"
+                        placeholder="Masukkan Password" required>
+
+                    <!-- Icon Mata -->
+                    <span class="input-group-text" style="cursor: pointer;" onclick="togglePassword()">
+                        <i class="bi bi-eye" id="eyeIcon"></i>
+                    </span>
+                </div>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">
+            <!-- Button -->
+            <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
+                <i class="bi bi-box-arrow-in-right"></i>
                 Login
             </button>
         </form>

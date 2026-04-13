@@ -109,7 +109,7 @@ $transaksi_terbaru = $stmt->fetchAll();
         <div class="card h-100">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <span>Transaksi Terbaru</span>
-                <a href="<?= $base_url ?>/app/transaksi/riwayat.php" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
+                <!--<a href="<?= $base_url ?>/app/transaksi/riwayat.php" class="btn btn-sm btn-outline-primary">Lihat Semua</a>-->
             </div>
             <div class="card-body p-0">
                 <div class="list-group list-group-flush">
@@ -144,41 +144,41 @@ $transaksi_terbaru = $stmt->fetchAll();
 </div>
 
 <!-- Quick Actions -->
-<div class="row mt-4">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">Aksi Cepat</div>
-            <div class="card-body">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/barang/tambah.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-plus-square fs-5"></i>
-                            Tambah Barang
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/transaksi/masuk.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-arrow-down-circle fs-5"></i>
-                            Barang Masuk
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/transaksi/keluar.php" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-arrow-up-circle fs-5"></i>
-                            Barang Keluar
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="<?= $base_url ?>/app/laporan/" class="btn btn-outline-primary w-100">
-                            <i class="bi bi-file-earmark-text fs-5"></i>
-                            Lihat Laporan
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="row mt-4">-->
+<!--    <div class="col-12">-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Aksi Cepat</div>-->
+<!--            <div class="card-body">-->
+<!--                <div class="row g-3">-->
+<!--                    <div class="col-md-3">-->
+<!--                        <a href="<?= $base_url ?>/app/barang/tambah.php" class="btn btn-outline-primary w-100">-->
+<!--                            <i class="bi bi-plus-square fs-5"></i>-->
+<!--                            Tambah Barang-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3">-->
+<!--                        <a href="<?= $base_url ?>/app/transaksi/masuk.php" class="btn btn-outline-primary w-100">-->
+<!--                            <i class="bi bi-arrow-down-circle fs-5"></i>-->
+<!--                            Barang Masuk-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3">-->
+<!--                        <a href="<?= $base_url ?>/app/transaksi/keluar.php" class="btn btn-outline-primary w-100">-->
+<!--                            <i class="bi bi-arrow-up-circle fs-5"></i>-->
+<!--                            Barang Keluar-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3">-->
+<!--                        <a href="<?= $base_url ?>/app/laporan/" class="btn btn-outline-primary w-100">-->
+<!--                            <i class="bi bi-file-earmark-text fs-5"></i>-->
+<!--                            Lihat Laporan-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <?php
 // Simpan data chart untuk digunakan setelah footer loaded

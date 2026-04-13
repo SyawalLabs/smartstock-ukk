@@ -53,6 +53,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/datatables.css">
     <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/datatables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="<?= $base_url ?>/app/assets/css/sweetalert2.min.css">
